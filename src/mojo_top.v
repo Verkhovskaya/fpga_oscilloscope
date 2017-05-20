@@ -31,7 +31,7 @@ module mojo_top(
   always @(posedge clk)
 	clock_2 = clock_2 + 1;
 
-	assign camera_clock = clock_2[1];
+	assign camera_clock = clock_2[0];
 
   wire [7:0] tx_data;
   wire new_tx_data;

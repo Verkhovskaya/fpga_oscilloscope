@@ -1,7 +1,7 @@
 import serial
 
-with serial.Serial('/dev/cu.usbmodem1421', 250000, timeout=1) as ser:
+with serial.Serial('/dev/cu.usbmodem1421', 50000000, timeout=1) as ser:
 
-    for i in range(10):
+    for i in range(32):
         ser.write(b'h')
-        print(ser.read(1))        # read one byte
+        print(repr(ser.read(1)))      # read one byte
