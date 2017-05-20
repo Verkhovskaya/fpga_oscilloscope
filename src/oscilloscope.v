@@ -6,14 +6,20 @@ module oscilloscope (
     input tx_busy,
     input [7:0] rx_data,
     input new_rx_data,
-	 input input_pin
-  );
+    input input_pin_0,
+	 input input_pin_1,
+   input input_pin_2,
+   input input_pin_3,
+   input input_pin_4,
+   input input_pin_5,
+   input input_pin_6,
+   input input_pin_7);
 
   localparam STATE_SIZE = 1;
   localparam IDLE = 0,
     PRINT_MESSAGE = 1;
 
-  localparam MESSAGE_LEN = 14;
+  localparam MESSAGE_LEN = 1;
 
   reg [STATE_SIZE-1:0] state_d, state_q;
 
@@ -21,9 +27,15 @@ module oscilloscope (
 
   data_port data_port (
   .clk(clk),
-  .addr(addr_q),
-  .data(tx_data),
-  .input_pin(input_pin)
+  .data_out(tx_data),
+  .input_pin_0(input_pin_0),
+ .input_pin_1(input_pin_1),
+ .input_pin_2(input_pin_2),
+ .input_pin_3(input_pin_3),
+ .input_pin_4(input_pin_4),
+ .input_pin_5(input_pin_5),
+ .input_pin_6(input_pin_6),
+ .input_pin_7(input_pin_7)
   );
 
   always @(*) begin

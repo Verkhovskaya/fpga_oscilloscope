@@ -20,17 +20,17 @@ module mojo_top(
     input avr_rx_busy,// AVR Rx buffer full
 	input input_pin,
 	output camera_clock
-	
+
   );
 
 
   wire rst = ~rst_n; // make reset active high
 	reg [1:0] clock_2;
   assign led = 8'b0;
-  
+
   always @(posedge clk)
 	clock_2 = clock_2 + 1;
-	
+
 	assign camera_clock = clock_2[1];
 
   wire [7:0] tx_data;
@@ -70,7 +70,7 @@ module mojo_top(
     .tx_busy(tx_busy),
     .rx_data(rx_data),
     .new_rx_data(new_rx_data),
-	 .input_pin(input_pin)
+	 .input_pin_0(input_pin)
   );
 
 endmodule
