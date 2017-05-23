@@ -18,20 +18,20 @@ module mojo_top(
     input avr_tx, // AVR Tx => FPGA Rx
     output avr_rx, // AVR Rx => FPGA Tx
     input avr_rx_busy,// AVR Rx buffer full
-	input input_pin,
 	output camera_clock
-
   );
 
 
   wire rst = ~rst_n; // make reset active high
-	reg [1:0] clock_2;
-  assign led = 8'b0;
+	reg [26:0] clock_2;
+  assign led[6:0] = 7'b0;
 
   always @(posedge clk)
 	clock_2 = clock_2 + 1;
 
-	assign camera_clock = clock_2[0];
+  assign camera_clock = clock_2[20];
+  assign led[7] = clock_2[26];
+
 
   wire [7:0] tx_data;
   wire new_tx_data;
@@ -62,6 +62,8 @@ module mojo_top(
     .new_rx_data(new_rx_data)
   );
 
+  wire [7:0] scope_port;
+
   oscilloscope oscilloscope (
     .clk(clk),
     .rst(rst),
@@ -70,7 +72,19 @@ module mojo_top(
     .tx_busy(tx_busy),
     .rx_data(rx_data),
     .new_rx_data(new_rx_data),
-	 .input_pin_0(input_pin)
-  );
+	  .input_pin_0(scope_port[0]),
+	  .input_pin_1(scope_port[1]),
+	  .input_pin_2(scope_port[2]),
+	  .input_pin_3(scope_port[3]),
+	  .input_pin_4(scope_port[4]),
+	  .input_pin_5(scope_port[5]),
+	  .input_pin_6(scope_port[6]),
+	  .input_pin_7(scope_port[7]));
+
+  gravity_simulator gravity_simulator(
+    .clock(clk),
+    .reset(rst),
+    .to_scope(scope_port)
+    );
 
 endmodule

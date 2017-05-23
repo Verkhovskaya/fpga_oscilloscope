@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-20T00:19:22</DateModified>
+  <DateModified>2017-05-22T22:24:49</DateModified>
   <ModuleName>mojo_top</ModuleName>
-  <SummaryTimeStamp>2013-04-16T10:54:27</SummaryTimeStamp>
-  <SavedFilePath>/home/mojo/Dropbox/mojo_projects/Oscilloscope/iseconfig/mojo_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/mojo/Dropbox/mojo_projects/Oscilloscope/syn/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2017-05-22T22:21:42</SummaryTimeStamp>
+  <SavedFilePath>/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/iseconfig/mojo_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/syn/</ImplementationReportsDirectory>
   <DateInitialized>2012-11-08T12:38:20</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
@@ -42,7 +42,7 @@
   </viewgroup>
   <viewgroup label="Errors and Warnings" >
    <view program="pn" WrapMessages="true" contextTags="EDK_OFF" type="MessageList" hideColumns="Filtered, New" file="_xmsgs/pn_parser.xmsgs" label="Parser Messages" />
-   <view program="xst" WrapMessages="true" contextTags="XST_ONLY,EDK_OFF" hidden="false" type="MessageList" hideColumns="Filtered" file="_xmsgs/xst.xmsgs" label="Synthesis Messages" />
+   <view program="xst" WrapMessages="true" contextTags="XST_ONLY,EDK_OFF" showInfos="1" hidden="false" type="MessageList" hideColumns="Filtered" file="_xmsgs/xst.xmsgs" label="Synthesis Messages" showWarnings="1" />
    <view inputState="Synthesized" program="ngdbuild" WrapMessages="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/ngdbuild.xmsgs" label="Translation Messages" />
    <view inputState="Translated" program="map" WrapMessages="true" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/map.xmsgs" label="Map Messages" />
    <view inputState="Mapped" program="par" WrapMessages="true" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/par.xmsgs" label="Place and Route Messages" />

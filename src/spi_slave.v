@@ -10,6 +10,7 @@ module spi_slave(
     output [7:0] dout
     );
 
+
 reg mosi_d, mosi_q;
 reg ss_d, ss_q;
 reg sck_d, sck_q;

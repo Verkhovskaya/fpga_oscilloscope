@@ -1,0 +1,67 @@
+Welcome to Xilinx CORE Generator.
+Help system initialized.
+The IP Catalog has been reloaded.
+Opening project file
+/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/generat
+ed_cores/coregen.cgp.
+Customize and GenerateINFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+Customizing IP...
+Release 14.7 - Xilinx CORE Generator IP GUI Launcher P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Finished Customizing.
+Generating IP...
+WARNING:sim:472 - The chosen IP does not support a Verilog behavioral model,
+   generating a Verilog structural model instead.
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+Generating Implementation files.
+Generating NGC file.
+Generating Verilog structural model.
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating metadata file...
+Generating ISE project...
+XCO file found: div_gen_v3_2.xco
+XMDF file found: div_gen_v3_2_xmdf.tcl
+Adding
+/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/generat
+ed_cores/tmp/_cg/div_gen_v3_2.asy -view all -origin_type imported
+Adding
+/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/generat
+ed_cores/tmp/_cg/div_gen_v3_2.ngc -view all -origin_type created
+Checking file
+"/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/genera
+ted_cores/tmp/_cg/div_gen_v3_2.ngc" for project device match ...
+File
+"/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/genera
+ted_cores/tmp/_cg/div_gen_v3_2.ngc" device information matches project device.
+Adding
+/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/generat
+ed_cores/tmp/_cg/div_gen_v3_2.v -view all -origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/gen
+   erated_cores/tmp/_cg/div_gen_v3_2.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+/home/mojo/Dropbox/mojo_projects/physics_simulator_2/physics_simulator_3/generat
+ed_cores/tmp/_cg/div_gen_v3_2.veo -view all -origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/div_gen_v3_2"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+Closed project file.

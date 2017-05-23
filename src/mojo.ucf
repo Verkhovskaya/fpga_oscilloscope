@@ -2,7 +2,7 @@
 NET "clk" TNM_NET = clk;
 TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
 
-# PlanAhead Generated physical constraints 
+# PlanAhead Generated physical constraints
 NET "clk" LOC = P56 | IOSTANDARD = LVTTL;
 NET "rst_n" LOC = P38 | IOSTANDARD = LVTTL;
 
@@ -29,7 +29,5 @@ NET "spi_channel<3>" LOC = P65 | IOSTANDARD = LVTTL;
 NET "avr_tx" LOC = P55 | IOSTANDARD = LVTTL;
 NET "avr_rx" LOC = P59 | IOSTANDARD = LVTTL;
 NET "avr_rx_busy" LOC = P39 | IOSTANDARD = LVTTL;
-
-NET "input_pin" LOC = P67 | IOSTANDARD = LVTTL;
 
 NET "camera_clock" LOC = P15 | IOSTANDARD = LVTTL;

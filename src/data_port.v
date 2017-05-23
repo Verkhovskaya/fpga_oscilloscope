@@ -10,6 +10,7 @@ module data_port (
     input input_pin_6,
     input input_pin_7);
 
+
   wire [7:0] data;
 
   assign data[0] = input_pin_0;
@@ -23,9 +24,11 @@ module data_port (
 
    reg [7:0] data_q;
 	assign data_out = data_q;
-	
+
   always @(posedge clk) begin
     data_q <= data;
   end
+
+
 
 endmodule
